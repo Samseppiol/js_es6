@@ -14,3 +14,17 @@ let doubled = numbers.map(function(number) {
 });
 console.log(doubled)
 console.log(doubledNumbers)
+
+// More complicated example of map 
+
+let cars = [
+  { model: 'Mercedes', price: 'EXPENSIVE'},
+  { model: 'Holden', price: 'Cheap'},
+];
+
+// Mapping over cars with anonymous function to be called one time for each car.
+let prices = cars.map(function(car) {
+  // Plucking out the price value from car
+  return car.price;
+});
+console.log(prices)
