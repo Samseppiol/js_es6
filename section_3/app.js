@@ -28,3 +28,13 @@ let prices = cars.map(function(car) {
   return car.price;
 });
 console.log(prices)
+
+
+// A pluck function that should accept an array and a string representing a property name
+// and return an array containing that property from each object
+
+function pluck(array, property) {
+  return array.map(function(item) {
+    return item[property]
+  })
+}
