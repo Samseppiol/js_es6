@@ -1,10 +1,10 @@
 
 
 let products = [
-  { name: 'Orange', type: 'Fruit' },
-  { name: 'banana', type: 'Fruit' },
-  { name: 'celery', type: 'Vegetable' },
-  { name: 'mushroom', type: 'Vegetable' },
+  { name: 'Orange', type: 'Fruit', quantity: 0, price: 1 },
+  { name: 'banana', type: 'Fruit', quantity: 10, price: 15 },
+  { name: 'celery', type: 'Vegetable', quantity: 30, price: 9 },
+  { name: 'mushroom', type: 'Vegetable', quantity: 3, price: 15 },
 ];
 
 
@@ -22,5 +22,13 @@ console.log(filteredProducts)
 var filter = products.filter(function(product) {
   return product.type === 'Fruit';
 })
-
 console.log(filter)
+
+// Using filter over several different values of an object.
+var filter_two = products.filter(function(product) {
+  return product.type === 'Vegetable'
+   && product.quantity > 0 
+   && product.price < 10
+})
+
+console.log(filter_two)
