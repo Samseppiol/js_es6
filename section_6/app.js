@@ -28,3 +28,9 @@ comps = computers.every(function(computer) {
 })
 
 console.log(comps)
+
+comps_two = computers.some(function(computer) {
+  return computer.ram > 8
+})
+
+console.log(comps_two)
