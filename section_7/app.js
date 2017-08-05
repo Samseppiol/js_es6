@@ -32,3 +32,27 @@ var a = primaryColours.reduce(function(previous, primaryColour) {
 }, [])
 
 console.log(a)
+
+
+// Real life example for the parentheses challenge 
+// These are array helpers, first thing we have to do is convert the string 
+// into an array
+// We are going to make the initial value a counter which will be an integer 
+// Every time we see an open parenthese, increase the counter by one 
+// Every time there is a closing parenthese decrease the counter by one
+// If the end number is not 0, the parentheses are unbalanced
+function balancedParens(string) {
+  // Use the bang symbol to make the output a true or false
+  // True meaning they are balanced, false meaning not balanced
+  return !string.split('').reduce(function(previous, char) {
+    // If parenthese are in the wrong order but still balanced
+    if (previous < 0) { return previous;}
+    // Add a number if there is a (
+    if (char === "(") {return ++previous; }
+    // Subtract a number if there is a )
+    if (char === ")") { return --previous;}
+    return previous
+  }, 0)
+}
+
+console.log(balancedParens("((()))"))
