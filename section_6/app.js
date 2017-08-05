@@ -54,6 +54,30 @@ console.log(a)
 
 // Are there at least some names with length greater than 4?
 // Returns true
-names.some(function(name) {
+var b = names.some(function(name) {
   return name.length > 4;
+})
+
+
+// A real life example, a user logging in/signing up
+function Field(value) {
+  this.value = value;
+}
+
+Field.prototype.validate = function() {
+  return this.value.length > 0;
+}
+
+var username = new Field("noob")
+var password = new Field("my_password")
+var birthdate = new Field("03/01/1995")
+
+// Would obviouslly get long and tedious with more fields
+var c = username.validate() && password.validate && birthdate.validate
+console.log(c)
+
+var fields = [username, password, birthdate]
+
+fields.every(function(field) {
+  return field.validate()
 })
