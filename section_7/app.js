@@ -12,3 +12,23 @@ var summed = numbers.reduce(function(sum, number) {
 }, 0);
 
 console.log(summed)
+
+
+var primaryColours = [
+  {colour: 'red'},
+  {colour: 'yellow'},
+  {colour: 'blue'}
+]
+// We want to pull out all the values
+// We could obviously use map but demonstrating another use case for reduce
+
+
+// Because the end value will be an array, we put in an empty array as the
+// initial value
+// Previous is the previous value that went through the loop
+var a = primaryColours.reduce(function(previous, primaryColour) {
+  previous.push(primaryColour.colour);
+  return previous;
+}, [])
+
+console.log(a)
