@@ -31,3 +31,17 @@ numbers.map(function(number) {
   return number * 2
 })
 numbers.map(number => 2 * number)
+
+
+const team = {
+  members: [
+    'Ghost',
+    'Tommy'
+  ],
+  teamName: 'Power',
+  teamSummary: function() {
+    return this.members.map(function(member) {
+      return `${member} is on team: ${this.teamName}`;
+    })
+  }
+}
