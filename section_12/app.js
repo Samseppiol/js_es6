@@ -14,3 +14,19 @@ function makeAjaxRequest(url, method='GET') {
 
 console.log(makeAjaxRequest('google.com'))
 console.log(makeAjaxRequest('google.com', 'POST'))
+
+// Use case for default function arguments
+
+function User(id) {
+  this.id = id 
+}
+
+function generateId() {
+  return Math.random() * 99999;
+}
+
+// Specifiying default function argument to create a new user on the fly
+function createAdminUser(user = new User(generateId())) {
+  user.admin = true
+  return user
+}
