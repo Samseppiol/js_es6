@@ -18,3 +18,16 @@ console.log(subtract(4, 2))
 const multiply = (a, b) => a * b;
 
 console.log(multiply(2, 6))
+
+// If we have a single argument we can get rid of the parentheses around it
+const double = number =>  2 * number;
+
+console.log(double(4))
+
+
+const numbers = [1,2,3];
+
+numbers.map(function(number) {
+  return number * 2
+})
+numbers.map(number => 2 * number)
