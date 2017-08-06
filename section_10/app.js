@@ -45,3 +45,19 @@ const team = {
     })
   }
 }
+console.log(team)
+
+const squad = {
+  members: [
+    'Kanan',
+    'Dre'
+  ],
+  squadName: 'Power',
+  squadSummary: function() {
+    return this.members.map((member) => {
+      return `${member} is on squad: ${this.squadName}`;
+    })
+  }
+}
+
+
