@@ -46,3 +46,20 @@ function validateShoppingList(...items) {
 }
 
 console.log(validateShoppingList('oranges', 'bread'))
+
+
+// Real life example, making a js library 
+
+// using a stupid name like calculate product and want to rename it to multiply
+// Cant just change it and deploy, may break peoples applications
+
+const MathLibrary = {
+  calculateProduct(...rest) {
+    console.log('Use the multiply method instead')
+    return this.multiply(...rest);
+  },
+  multiply(a, b) {
+    return a * b;
+  }
+};
+
