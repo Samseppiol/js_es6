@@ -52,7 +52,7 @@ console.log(validateShoppingList('oranges', 'bread'))
 
 // using a stupid name like calculate product and want to rename it to multiply
 // Cant just change it and deploy, may break peoples applications
-
+// Instead of having duplicate logic, you can simply call multiply on the old method
 const MathLibrary = {
   calculateProduct(...rest) {
     console.log('Use the multiply method instead')
