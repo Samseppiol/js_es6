@@ -1,0 +1,2 @@
+## Destructuring
+> Reducing duplicate code
