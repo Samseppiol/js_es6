@@ -72,3 +72,27 @@ const Google = {
 // Find the offices property, and pull out the first element
 const { offices: [ office ] } = Google
 console.log(office)
+
+// When to use destructuring
+function signup(username, password, email, dateOfBirth, city){
+  // create a new user
+}
+
+// Have to remember the order and data kind of all the arguments
+signup('Jack', 'password', 'test@test.com', '03/01/1995', 'Melbourne')
+
+
+// Because of destructuring the order of arguments does not matter
+function signupTwo({ password, email, dateOfBirth, city, username }) {
+
+}
+
+const user = {
+  username: 'myname',
+  password: 'mypassword',
+  email: 'test@email.com',
+  dateOfBirth: '21/12/2016',
+  city: 'Melbourne'
+}
+
+console.log(signupTwo(user))
