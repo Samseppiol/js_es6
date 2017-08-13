@@ -14,3 +14,25 @@ var expense = {
 const { type, amount } = expense 
 
 console.log(type)
+
+
+// Another example 
+
+var savedFile = {
+  extension: '.jpg',
+  name: 'repost',
+  size: 14040
+}
+
+function fileSummary(file) {
+  return `The file ${file.name}${file.extension} is of size ${file.size}`
+}
+
+console.log(fileSummary(savedFile))
+
+// Or using destructuring
+function fileSummaryTwo({ name, extension, size}) {
+  return `The file ${name}${extension} is of size ${size}`
+}
+
+console.log(fileSummaryTwo(savedFile))
