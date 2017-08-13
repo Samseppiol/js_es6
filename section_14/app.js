@@ -51,3 +51,24 @@ const firstCompany = companies[0];
 
 console.log(name, name2, name3)
 console.log(firstCompany)
+
+
+// Another example with arrays or objects
+
+const companiesTwo = [
+  { name: 'Google', place: 'Mountain View'},
+  { name: 'Facebook', place: 'Menlo Park'},
+  { name: 'Uber', place: 'San Fransisco'}
+]
+
+const [{ place }] = companiesTwo 
+console.log(place)
+
+const Google = {
+  offices: ['Mountain View', 'New York', 'London']
+}
+
+// How do we get the first element within the locations property
+// Find the offices property, and pull out the first element
+const { offices: [ office ] } = Google
+console.log(office)
