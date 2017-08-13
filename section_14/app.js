@@ -96,3 +96,26 @@ const user = {
 }
 
 console.log(signupTwo(user))
+
+
+// Real life example of array destructuring
+
+// X and Y values for plotting a chart
+// 
+const points = [
+  [4, 5],
+  [10, 1],
+  [0, 40]
+];
+
+// Convert that to objects with an X and a Y category
+[ 
+  { x: 4, y: 5 },
+  { x: 10, y: 1 },
+  {x: 0, y: 40 }
+]
+
+// Only es6 code
+points.map(([ x, y ]) => {
+  return {x, y}
+})
