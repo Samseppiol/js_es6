@@ -36,3 +36,18 @@ function fileSummaryTwo({ name, extension, size}) {
 }
 
 console.log(fileSummaryTwo(savedFile))
+
+// Destructuring arrays 
+
+const companies = [
+  'Google',
+  'Facebook',
+  'Uber'
+];
+
+const [ name, name2, name3 ] = companies;
+// Instead of doing this
+const firstCompany = companies[0];
+
+console.log(name, name2, name3)
+console.log(firstCompany)
