@@ -32,3 +32,19 @@ console.log("------")
 console.log(toyota.drive)
 console.log(toyota.honk)
 
+// ES6 classes
+
+class Vehicle {
+  // An initialize method/setup
+  // Gets run whenever the keyword new is used with the class
+  constructor({ title }) {
+    this.title = title;
+  }
+  drive() {
+    return 'vroom'
+  }
+}
+
+const vehicle = new Vehicle({ title: 'Toyota'});
+console.log(vehicle)
+console.log(vehicle.drive)
